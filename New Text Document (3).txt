@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>حاشیه RGB گرادینت متحرک</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      background: #111;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .border-container {
+      padding: 2px; /* ضخامت حاشیه */
+      background: linear-gradient(270deg, 
+        red, orange, yellow, green, cyan, blue, violet, red);
+      background-size: 400% 400%;
+      animation: borderAnimation 10s linear infinite;
+    }
+
+    .content {
+      background-color: #222;
+      color: white;
+      padding: 40px;
+      font-family: sans-serif;
+      text-align: center;
+    }
+
+    @keyframes borderAnimation {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="border-container">
+    <div class="content">
+      
+    </div>
+  </div>
+</body>
+</html>
